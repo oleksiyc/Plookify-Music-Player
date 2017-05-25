@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="player.Controller">
+   <left>
+      <AnchorPane prefHeight="800.0" prefWidth="148.0" style="-fx-background-color: #282828;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="15.0" layoutY="120.0" text="PLAYLISTS" textFill="WHITE" />            
+            <TextField fx:id="searchArtist" layoutX="7.0" layoutY="12.0" promptText="Search for Artist..." />
+            <ListView fx:id="playlistNames" layoutY="163.0" onMouseClicked="#viewPlaylist" prefHeight="395.0" prefWidth="180.0" styleClass="playlistnames" stylesheets="@stylesheet.css">
+            </ListView>
+            <ListView fx:id="listSongs" layoutY="71.0" onMouseClicked="#listSongs" prefHeight="48.0" prefWidth="180.0" styleClass="mainList" stylesheets="@stylesheet.css">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Songs" />
+                        
+                          </FXCollections>
+                </items>
+            </ListView>     
+            <Button fx:id="newPlaylist" layoutY="744.0" mnemonicParsing="false" onAction="#newPlaylist" prefHeight="50.0" prefWidth="180.0" styleClass="newplaylist" stylesheets="@stylesheet.css" text="NEW PLAYLIST" textFill="WHITE" />
+            <Label layoutX="15.0" layoutY="54.0" text="MAIN" textFill="WHITE" />
+                    
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="795.0" prefWidth="912.0" style="-fx-background-color: #181818;" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="playlistLabel" layoutX="35.0" layoutY="14.0" styleClass="playlistLabel" textFill="WHITE" />
+            <!--<Label fx:id="Type" text="Type: " layoutX="185.0" layoutY="50.0" textFill="WHITE" styleClass="Type" /> -->
+            <Label fx:id="privateLabel" layoutX="38.0" layoutY="65.0" styleClass="privateLabel" textFill="WHITE" />
+             <Label fx:id="searchResults" layoutX="35.0" layoutY="14.0" styleClass="searchResults" text="Search Results" textFill="WHITE" />
+            <Button id="addNowPlaying" fx:id="addNowPlaying" layoutX="718.0" layoutY="52.0" mnemonicParsing="false" onAction="#addNowPlaying" styleClass="addNowPlaylist" stylesheets="@stylesheet.css" text="ADD TO NOW PLAYING" textAlignment="CENTER" textFill="#262626" />  
+            <Button id="addSearchPlaylist" fx:id="addSearchPlaylist" layoutX="714.0" layoutY="52.0" mnemonicParsing="false" onAction="#addSearchPlaylist" styleClass="addSearchPlaylist" stylesheets="@stylesheet.css" text="ADD TO NEW PLAYLIST" textAlignment="CENTER" textFill="#262626" />
+            <Button id="addSearchExistingPlaylist" fx:id="addSearchExistingPlaylist" layoutX="507.0" layoutY="52.0" mnemonicParsing="false" onAction="#addSearchExistingPlaylist" styleClass="addSearchExistingPlaylist" stylesheets="@stylesheet.css" text="ADD TO EXISTING PLAYLIST" textAlignment="CENTER" textFill="#262626" />
+            <TableView id="tableView" fx:id="tableView" editable="true" layoutX="35.0" layoutY="105.0" prefHeight="690.0" prefWidth="862.0" styleClass="tableview" stylesheets="@stylesheet.css">
+                <columns>
+                    <TableColumn id="trackid" fx:id="trackid" prefWidth="65.0" style="-fx-text-fill: white" text="ID" />
+                    <TableColumn id="trackname" fx:id="trackname" prefWidth="364.0" style="-fx-text-fill: white" text="NAME" />
+                    <TableColumn id="artist" fx:id="artist" prefWidth="201.0" style="-fx-text-fill: white" text="ARTIST" />
+                    <TableColumn id="genre" fx:id="genre" prefWidth="125.0" style="-fx-text-fill: white" text="GENRE" />
+                    <TableColumn id="duration" fx:id="duration" prefWidth="90.0" style="-fx-text-fill: white" text="DURATION" />
+                </columns>
+            </TableView>
+            <Separator layoutX="36.0" layoutY="94.0" prefHeight="1.0" prefWidth="847.0" />
+            
+               </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane fx:id="bottom" prefHeight="65.0" prefWidth="1077.0" style="-fx-background-color: #282828;" styleClass="tracksection" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER" >
+    <children>
+    
+          <Label layoutX="230.0" layoutY="25.0" text="0:00" textFill="WHITE" />
+          <Slider layoutX="300" layoutY="26" prefWidth="750" />
+          <Label layoutX="1050.0" layoutY="26" text="3:35" textFill="WHITE" />
+            <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="96.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../common/pause.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="62.0" layoutX="126.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="140.0" layoutY="18.0">
+               <image>
+                  <Image url="@../common/fastforward.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../common/rewind.png" />
+               </image>
+            </ImageView>
+                    <ImageView fx:id="play" fitHeight="46.0" fitWidth="30.0" layoutX="58.0" layoutY="21.0"  pickOnBounds="true" preserveRatio="true">
+           <image>
+              <Image url="@../common/play.png" />
+           </image>
+        </ImageView>
+          <ImageView fx:id="nowPlaying" fitHeight="46.0" fitWidth="30.0" layoutX="1100" layoutY="10" onMouseClicked="#nowPlaying" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../common/nowplaying.png" />
+               </image>
+            </ImageView>
+        
+        
+          
+          
+    </children>
+
+      </AnchorPane>
+   </bottom>
+   <top>
+      <AnchorPane prefHeight="65.0" prefWidth="1077.0" style="-fx-background-color: #282828;" styleClass="account" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../common/logo4.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </top>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282828;" styleClass="social" stylesheets="@stylesheet.css" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

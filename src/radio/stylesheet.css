@@ -1,0 +1,256 @@
+/* Author: Dumbledore
+
+
+*/
+
+
+
+.newplaylist{
+    -fx-background-color:#282828;
+    -fx-border-color: #181818;
+    -fx-border-width:  1.5px 0px 0px 0px;
+}
+
+.newplaylist:hover{    
+    -fx-background-color:#333333;
+}
+
+.playlistnames{
+    -fx-background-color: #282828;    
+}
+
+.mainList{
+    -fx-background-color: #282828;    
+}
+
+.list-cell{
+    -fx-background-color: #282828;
+    -fx-text-fill: #adafb2;
+    -fx-cell-size: 33;
+    -fx-padding: 10px 10px 0px 14px;
+    
+}
+
+.list-cell:filled:selected, .list-cell:filled:selected {
+    -fx-background-color: #282828;
+    -fx-text-fill: white;
+    -fx-border-color: #ffea00;
+    -fx-border-width:  0px 0px 0px 4px;	
+}
+
+.list-cell:even { 
+    -fx-background-color: #282828;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #282828;
+    -fx-text-fill: white;
+}
+.table-row-cell {
+    -fx-background-color: #181818;    
+    -fx-text-fill: white;
+    -fx-border-color: #282828;
+    -fx-border-width:  0px 0px 1px 0px;	
+    -fx-cell-size: 40px;
+    -fx-font-size: 15px;
+}
+
+.table-cell { 
+    -fx-alignment: center-left;
+}
+
+.table-row-cell:selected {
+    -fx-table-cell-border-color: transparent;
+    -fx-background-color: #181818;
+}
+
+.table-view, .table-view:selected, .table-view:focused{
+    -fx-table-cell-border-color: transparent;
+    -fx-background-color: #181818; 
+}
+
+.table-view:hover{
+    -fx-table-cell-border-color: transparent;
+}
+
+/* Selected row */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #282828;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: white ;
+    -fx-text-inner-color:white;
+
+}
+
+/* Selected row when table not focused */
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: #181818;  
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: white ;
+    -fx-text-inner-color:white;
+}
+
+/* Row hovered */
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: #282828;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: white ;
+    -fx-text-inner-color:white;
+}
+
+/* Selected row hovered */
+.table-view:focused .table-row-cell:filled:focused:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: #282828;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: white ;
+    -fx-text-inner-color:white;
+}
+
+/* Selected row hovered when table not focused */
+.table-view:row-selection .table-row-cell:filled:focused:hover {
+    -fx-background-color: #282828;
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1, 2 2 3 2, 3 3 4 3;
+    -fx-text-fill: white ;
+    -fx-text-inner-color:white;
+}
+
+.table-view .column-header {
+    -fx-background-color: #181818;
+    -fx-size: 40;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #181818;
+    -fx-cell-size: 40px;
+    -fx-border-color: #282828;
+    -fx-border-width:  0px 0px 1px 0px;	
+    
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #adafb2;
+    -fx-font-weight: normal;   
+    -fx-font-size: 15px;
+    -fx-alignment: center-left;
+    
+}
+
+.table-view:hover .column-header:hover .label:hover {
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+}
+
+.scroll-bar .track{
+    -fx-background-color: #181818;
+}
+
+.scroll-bar .thumb{
+    -fx-background-color: #282828;
+}
+
+.list-view .scroll-bar .track{
+    -fx-background-color: #282828;
+}
+
+.list-view .scroll-bar .thumb{
+    -fx-background-color: #181818;
+}
+
+.scroll-bar .decrement-button , .scroll-bar .increment-button  {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 12 0 0;
+}
+
+
+.scroll-bar .decrement-arrow, .scroll-bar .increment-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0;
+}
+
+
+.menu-item .label {
+    -fx-text-fill: #adafb2;
+}
+
+.menu-item:focused {
+     -fx-background-color: #444444;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #adafb2;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #333333;
+    -fx-background-radius: 4 4 4 4 ;
+}
+
+.tracksection {
+    -fx-border-color: #181818;
+    -fx-border-width:  1.5px 0px 0px 0px;	
+}
+
+.account {
+    -fx-border-color: #181818;
+    -fx-border-width:  0px 0px 1.5px 0px;	
+}
+
+.playlistLabel {
+    -fx-font-size: 45px;
+}
+
+.searchResults {
+    -fx-font-size: 45px;
+}
+
+.privateLabel {
+    -fx-font-size: 15px;
+}
+
+#addNowPlaying{
+    -fx-background-color:#ffea00;
+}
+
+#addNowPlaying:hover{
+    -fx-background-color:#fff150;
+}
+
+#addSearchPlaylist{
+    -fx-background-color:#ffea00;
+}
+
+#Generate{
+    -fx-background-color:#ffea00;
+}
+
+#addSearchPlaylist:hover{
+    -fx-background-color:#fff150;
+}
+
+#Generate:hover{
+    -fx-background-color:#fff150;
+}
+
+#addSearchExistingPlaylist{
+    -fx-background-color:#ffea00;
+}
+
+#addSearchExistingPlaylist:hover{
+    -fx-background-color:#fff150;
+}
+
+.separator .line {
+    -fx-border-style: solid;
+    -fx-border-color: #282828;
+    -fx-border-width: 0px 0px 1px 0px;
+}
+
+.tree-cell{
+    -fx-background-color: #282828;
+    -fx-text-fill: white;
+}

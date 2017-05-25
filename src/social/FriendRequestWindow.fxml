@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="454.0" prefWidth="821.0" style="-fx-background-color: #181818;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="social.FriendRequestWindowController">
+    <stylesheets>
+        <URL value="@stylesheet.css" />
+    </stylesheets>
+   <children>
+      <TableView id="FriendRequesttableView" fx:id="FriendRequesttableView" editable="true" layoutX="-2.0" prefHeight="399.0" prefWidth="821.0" styleClass="tableview" stylesheets="@stylesheet.css">
+    <columns>
+        <TableColumn id="id" fx:id="id" minWidth="20.0" prefWidth="100.0" style="-fx-text-fill: white" text="Sender ID" />
+        <TableColumn id="username" fx:id="username" minWidth="20.0" prefWidth="200.0" style="-fx-text-fill: white" text="User Name" />
+        <TableColumn id="message" fx:id="message" minWidth="20.0" prefWidth="400.0" style="-fx-text-fill: white" text="MESSAGE" />
+    </columns>
+</TableView>
+      <Button fx:id="AcceptReq" layoutX="340.0" layoutY="401.0" mnemonicParsing="false" onAction="#AcceptRequestButton" text="Accept Friend Request" />
+      <Button fx:id="DeclineReq" layoutX="548.0" layoutY="401.0" mnemonicParsing="false" onAction="#DeclineRequestButton" text="Decline Friend Request" />
+   </children>
+</AnchorPane>
